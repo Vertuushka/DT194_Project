@@ -1,6 +1,29 @@
-function main() {
+const menu = document.querySelector('#mobile-menu')
+const menuLinks = document.querySelector('.navbar__menu');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
+
+
+function home() {
 
 }
 
-// code should run after page is loaded
-document.addEventListener("DOMContentLoaded", main)
+function addClient () {
+
+}
+
+function editClient () {
+
+}
+
+function deleteClient () {
+
+}
+
+function logIn () {
+
+
+}
