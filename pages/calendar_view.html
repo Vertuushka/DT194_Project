@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <link rel="stylesheet" href="../style/client_view.css">
+    <script type="module" src="../scripts/dataManager.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
+    
+</head>
+<body>
+    <h1>Calendar view</h1>
+    <div class="content">
+        <div class="container">
+            <div class="card_container">
+                <div class="card_main">
+                    <button class="left"><img src="../img/arrow_back.svg" alt=""></button>
+                    <div class="card">
+                        <p class="card_header">Client name</p>
+                        <p class="card_date">2025/03/06</p>
+                        <form action="" class="card_form">
+                            <label for="type" class="card_label">Type: <input type="text" name="type" id="type" value="type" class="card_input"></label>
+                            <label for="weight" class="card_label">Weight: <input type="number" name="weight" id="weight" class="card_input" value="125"></label>
+                            <label for="coment" class="card_label">Comment: <input type="text" name="comment" id="comment" class="card_input" value="Additional info"></label>
+                        </form>
+                    </div>
+                    <button class="right"><img src="../img/arrow_forward.svg" alt=""></button>
+                </div>
+                <div class="card_actions">
+                    <button class="action_primary">Save</button>
+                    <button class="action_secondary">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="block">
+                <div id='calendar'></div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

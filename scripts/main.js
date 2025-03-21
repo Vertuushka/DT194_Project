@@ -1,17 +1,25 @@
-import { addNewData, readData, updateData, deleteData } from './dataManager.js';
+import { addNewData, readData, updateData, deleteData, sortByWeight, sortByDate } from './dataManager.js';
 
 function main() {
-    const menu = document.querySelector('#mobile-menu')
-    const menuLinks = document.querySelector('.navbar__menu');
+    // const menu = document.querySelector('#mobile-menu')
+    // const menuLinks = document.querySelector('.navbar__menu');
 
-    menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active');
-        menuLinks.classList.toggle('active');
+    // menu.addEventListener('click', function() {
+    //     menu.classList.toggle('is-active');
+    //     menuLinks.classList.toggle('active');
+    // });
+
+
+    let calendarEl = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
     });
+    calendar.render();
 
-    setAddButtonListener();
-    setEditClientListener();
-    setRemoveClientListener();
+
+    // setAddButtonListener();
+    // setEditClientListener();
+    // setRemoveClientListener();
 }
 
 function setAddButtonListener() {

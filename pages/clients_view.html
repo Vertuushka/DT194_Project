@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <link rel="stylesheet" href="../style/client_view.css">
+    <script type="module" src="../scripts/dataManager.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
+    
+</head>
+<body>
+    <h1>Clients view</h1>
+    <div class="content">
+        <div class="container">
+            <div class="card_container">
+                <div class="card_main">
+                    <button class="left"><img src="../img/arrow_back.svg" alt=""></button>
+                    <div class="card">
+                        <p class="card_header">Client name</p>
+                        <p class="card_date">2025/03/06</p>
+                        <form action="" class="card_form">
+                            <label for="type" class="card_label">Type: <input type="text" name="type" id="type" value="type" class="card_input"></label>
+                            <label for="weight" class="card_label">Weight: <input type="number" name="weight" id="weight" class="card_input" value="125"></label>
+                            <label for="coment" class="card_label">Comment: <input type="text" name="comment" id="comment" class="card_input" value="Additional info"></label>
+                        </form>
+                    </div>
+                    <button class="right"><img src="../img/arrow_forward.svg" alt=""></button>
+                </div>
+                <div class="card_actions">
+                    <button class="action_primary">Save</button>
+                    <button class="action_secondary">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="block">
+                <div class="search_line">
+                    <button class="new_client">+</button>
+                    <input type="text" name="" id="search_input">
+                </div>
+                <div class="results_wrapper">
+                    <div class="result_container">
+                        <p class="ta_left">Sort by:</p>
+                        <button class="filter_button">Date</button>
+                        <button class="filter_button">Weight</button>
+                        <!-- <div class="filters">
+                        </div>  -->
+                    </div>
+                    <div class="result_container result_template">
+                        <p class="ta_left">Search result line 1</p>
+                        <p class="ta_center">2025/03/01</p>
+                        <p class="ta_center">125kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

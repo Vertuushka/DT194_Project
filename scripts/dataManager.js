@@ -62,4 +62,16 @@ function deleteData(dataName, id) {
     return false;
 }
 
-export { getMaxId, addNewData, readData, updateData, deleteData };
+function sortByWeight(data) {
+    let sortedData = data;
+    sortedData.sort((a, b) => parseFloat(b.weight) - parseFloat(a.weight));
+    return sortedData;
+}
+
+function sortByDate(data) {
+    let sortedData = data;
+    sortedData.sort((a, b) => new Date(b.date) - new Date(a.date));
+    return sortedData; 
+}
+
+export { getMaxId, addNewData, readData, updateData, deleteData, sortByWeight, sortByDate };
