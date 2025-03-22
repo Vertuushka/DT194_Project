@@ -13,6 +13,8 @@ function getMaxId(dataName) {
     return maxId;
 }
 
+
+
 function addNewData(dataName, data) {
     let maxId = getMaxId(dataName) || 0;
     let id = maxId + 1;
@@ -38,6 +40,25 @@ function readData(dataName, id) {
     }
 
     return data;
+}
+
+function getCollectionsByDate(dataName, date) {
+    let result = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        if (key.startsWith(dataName)) {
+            let storedData = localStorage.getItem(key);
+            try {
+                let items = JSON.parse(storedData);
+                if (items.date === date) {
+                    result.push(items);
+                }
+            } catch (e) {
+                return null;
+            }
+        }
+    }
+    return result;
 }
 
 function updateData(dataName, id, newData) {
@@ -74,4 +95,11 @@ function sortByDate(data) {
     return sortedData; 
 }
 
-export { getMaxId, addNewData, readData, updateData, deleteData, sortByWeight, sortByDate };
+function login(credentials) {
+    if (credentials.username === 'admin' && credentials.password === 'admin') {
+        addNewData("loginRequired", false);
+        return true;
+    } else { return false; }
+}
+
+export { getMaxId, addNewData, readData, updateData, deleteData, getCollectionsByDate, sortByWeight, sortByDate };

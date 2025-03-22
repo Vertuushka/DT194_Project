@@ -5,6 +5,12 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .navbar {
     background: #131313;
     height: 80px;
@@ -99,6 +105,42 @@
     color: #f77062;
     transition: all 0.3s ease;
 }
+
+.hidden {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+#loginForm {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginInput {
+    padding: 0 0.5rem;
+    border: 1px solid #000;
+    height: 2rem;
+    width: 20rem;
+    border-radius: 5px;
+}
+
+.loginBtn {
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 4rem;
+    border-radius: 5px;
+}
+
+
 
 @media screen and (max-width: 960px) {
     .navbar__container {
