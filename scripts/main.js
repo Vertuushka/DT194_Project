@@ -122,7 +122,6 @@ function formOnSave(event) {
         'comment': event.target.elements["comment"].value,
     }
     let result;
-    console.log(data_old);
     if (data_old) {
         result = updateData("collection", selectedCollection, formData);
         selectedCollection = data_old.id;
