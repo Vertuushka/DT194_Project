@@ -14,8 +14,6 @@ function main() {
         const loginForm = document.querySelector("#loginForm");
         loginForm.addEventListener("submit", function(event){
             event.preventDefault();
-            console.log(event.target.elements["username"].value);
-            console.log(event.target.elements["password"].value);
             if (event.target.elements["username"].value == username && event.target.elements["password"].value == password) {
                 localStorage.setItem("loggedIn", true);
                 window.location.href = window.location.origin + "/pages/clients_view.html";
