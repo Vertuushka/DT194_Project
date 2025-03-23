@@ -18,12 +18,12 @@ function main() {
             console.log(event.target.elements["password"].value);
             if (event.target.elements["username"].value == username && event.target.elements["password"].value == password) {
                 localStorage.setItem("loggedIn", true);
-                window.location.href = window.location.origin + "/pages/clients_view.html";
+                window.location.href = window.location.origin + "/DT194_Project/pages/clients_view.html";
             }
         })
     }  
     else {
-        window.location.href = window.location.origin + "/pages/clients_view.html";
+        window.location.href = window.location.origin + "/DT194_Project/pages/clients_view.html";
     }
     
 }

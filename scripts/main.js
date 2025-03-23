@@ -167,7 +167,7 @@ function CalenderDateOnClick(info=null, date=null) {
 
 function main() {
     if (localStorage.getItem("loggedIn") == null || JSON.parse(localStorage.getItem("loggedIn")) == false) {
-        window.location.href = window.location.origin;
+        window.location.href = window.location.origin + "/DT194_Project/";
     }
     loadGlobalVariables();
     hideFormCard();
