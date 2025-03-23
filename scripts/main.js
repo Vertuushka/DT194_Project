@@ -112,7 +112,7 @@ function updateCollectionInfo() {
 
 function formOnSave(event) {
     event.preventDefault();
-    let id = selectedCollection ? 0 : calendarSelection;
+    let id = selectedCollection || calendarSelection;
     let data_old = readData("collection", id);
     let formData = {
         'client': event.target.elements["clientName"].value,
